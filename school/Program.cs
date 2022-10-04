@@ -4,9 +4,13 @@
     {
         static void Main(string[] args)
         {
-            string error = Console.ReadLine();
-            string correct = error.Replace(Console.ReadLine(),Console.ReadLine());
-            Console.WriteLine(correct);
+            int origWidth, width;
+            origWidth = Console.WindowWidth;
+            string text = Console.ReadLine();
+            int length = text.Length;
+            width = origWidth / 2 + length / 2;
+            Console.WriteLine(text.PadLeft(width));
+            Console.ReadKey(true);
         }
     }
 }
